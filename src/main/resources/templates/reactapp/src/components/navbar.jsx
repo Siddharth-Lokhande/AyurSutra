@@ -1,4 +1,3 @@
-// src/components/headr.jsx
 import React from 'react';
 
 function Navbar() {
