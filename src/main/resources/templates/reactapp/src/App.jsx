@@ -5,7 +5,7 @@ import './App.css'
 import Header from './components/headr'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
-import Start from './page/start'
+import Start from './page/starter/start'
 function App() {
 
   return (
