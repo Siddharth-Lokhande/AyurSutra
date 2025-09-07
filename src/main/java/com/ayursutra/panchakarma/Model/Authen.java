@@ -1,16 +1,12 @@
 package com.ayursutra.panchakarma.Model;
 import org.springframework.stereotype.Component;
-
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Component
 @Entity
 public class Authen {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private	int userid;
 	
 	private	String email;
