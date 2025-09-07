@@ -2,12 +2,17 @@ package com.ayursutra.panchakarma.Model;
 import org.springframework.stereotype.Component;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 @Component
 @Entity
 public class Authen {
 	@Id
-	private	Integer userid;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private	int userid;
+	
 	private	String email;
 	private	String username;
 	private	String password;
@@ -19,7 +24,7 @@ public class Authen {
 		return userid;
 	}
 
-	public void setUserid(Integer userid) {
+	public void setUserid(int userid) {
 		this.userid = userid;
 	}
 
@@ -54,7 +59,7 @@ public class Authen {
 	public void setIsdocter(Boolean isdocter) {
 		this.isdocter = isdocter;
 	}
-	public Authen(Integer userid, String email, String username, String password, Boolean isdocter) {
+	public Authen(int userid, String email, String username, String password, Boolean isdocter) {
 		super();
 		this.userid = userid;
 		this.email = email;
