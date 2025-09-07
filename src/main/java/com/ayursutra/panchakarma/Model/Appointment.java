@@ -11,11 +11,42 @@ public class Appointment {
 	
 	private	String AptName;
 	private	int price;
-    public Appointment() {
-    }
+
+	public Appointment() {
+	}
+	public Appointment(int aptId, String aptName, int price) {
+		super();
+		AptId = aptId;
+		AptName = aptName;
+		this.price = price;
+	}
+	public int getAptId() {
+		return AptId;
+	}
+
+	public void setAptId(int aptId) {
+		AptId = aptId;
+	}
+
+	public String getAptName() {
+		return AptName;
+	}
+
+	public void setAptName(String aptName) {
+		AptName = aptName;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
 
 		@Override
 		public String toString() {
-			return "Product [AptidId=" + AptidId + ", AptidName=" + AptidName + ", price=" + price + "]";
+			return "Product [AptidId=" + AptId + ", AptidName=" + AptName + ", price=" + price + "]";
 		}	
 }

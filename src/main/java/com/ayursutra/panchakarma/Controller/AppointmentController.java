@@ -18,21 +18,21 @@ import com.ayursutra.panchakarma.Service.AppointmentService;
 @CrossOrigin
 public class AppointmentController {
 	@Autowired
-	ProductService service;
+	AppointmentService service;
 @GetMapping("/products")
-public List<Product> getProduct() {
+public List<Appointment> getProduct() {
 	return service.getProducts();
 }
 @GetMapping("/products/{id}")
-public Product getProductById(@PathVariable int id) {
+public Appointment getProductById(@PathVariable int id) {
 	return service.getProductById(id);
 }
 @PostMapping("/products")
-public void addProduct(@RequestBody Product product) {
+public void addProduct(@RequestBody Appointment product) {
 	service.addProduct(product);
 }
 @PutMapping("/products")
-public void updateProduct(@RequestBody Product product) {
+public void updateProduct(@RequestBody Appointment product) {
 	service.updateProduct(product);
 }
 @DeleteMapping("/products/{id}")

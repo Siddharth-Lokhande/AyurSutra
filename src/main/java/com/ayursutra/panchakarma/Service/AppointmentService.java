@@ -11,23 +11,23 @@ public class AppointmentService {
 	@Service
 	public class ProductService {
 		@Autowired
-		ProductRepo repo;
+		AppointmentRepo repo;
 	
 	
-public List<Product> getProducts(){
+public List<Appointment> getProducts(){
 		return repo.findAll();
 }
-public Product getProductById(int prodId) {
-	return repo.findById(prodId).orElse(new Product());
+public Appointment getProductById(int prodId) {
+	return repo.findById(prodId).orElse(new Appointment());
 }
-public void addProduct(Product product) {
-	repo.save(product);
+public void addProduct(Appointment appointment) {
+	repo.save(appointment);
 }
-public void updateProduct(Product prod) {
-	repo.save(prod);
+public void updateProduct(Appointment appointment) {
+	repo.save(appointment);
 	}
-public void deleteProduct(int prodId) {
-	repo.deleteById(prodId);
+public void deleteProduct(int aptid) {
+	repo.deleteById(aptid);
 	}
 }
 }
