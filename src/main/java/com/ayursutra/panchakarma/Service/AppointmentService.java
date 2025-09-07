@@ -1,18 +1,14 @@
 package com.ayursutra.panchakarma.Service;
 
 import java.util.List;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ayursutra.panchakarma.Model.Appointment;
 import com.ayursutra.panchakarma.Repository.AppointmentRepo;
+@Service
 public class AppointmentService {
-	@Service
-	public class ProductService {
 		@Autowired
 		AppointmentRepo repo;
-	
 	
 public List<Appointment> getProducts(){
 		return repo.findAll();
@@ -29,5 +25,4 @@ public void updateProduct(Appointment appointment) {
 public void deleteProduct(int aptid) {
 	repo.deleteById(aptid);
 	}
-}
 }
