@@ -6,14 +6,13 @@ import Header from './components/headr'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 import Start from './page/starter/start'
+import Signup from './page/signup'
 function App() {
 
   return (
     <>
-    <Start/>
-    <Header/>
-    <Navbar/>
-    <Footer/>
+    <Signup/>
+    
     </>
   )
 }
