@@ -20,25 +20,25 @@ const Navbar = () => {
             onClick={() => handleLinkClick('firstLink')}
             className={`p-2 rounded-lg cursor-pointer ${activeLink === 'firstLink' ? 'bg-gray-200 text-black' : 'hover:text-gray-400'}`}
           >
-            First Link
+            Therapy
           </a>
           <a
             onClick={() => handleLinkClick('secondLink')}
             className={`p-2 rounded-lg cursor-pointer ${activeLink === 'secondLink' ? 'bg-gray-200 text-black' : 'hover:text-gray-400'}`}
           >
-            Second Link
+            Courses
           </a>
           <a
             onClick={() => handleLinkClick('thirdLink')}
             className={`p-2 rounded-lg cursor-pointer ${activeLink === 'thirdLink' ? 'bg-gray-200 text-black' : 'hover:text-gray-400'}`}
           >
-            Third Link
+            Reports
           </a>
           <a
             onClick={() => handleLinkClick('fourthLink')}
             className={`p-2 rounded-lg cursor-pointer ${activeLink === 'fourthLink' ? 'bg-gray-200 text-black' : 'hover:text-gray-400'}`}
           >
-            Fourth Link
+            Articles
           </a>
         </nav>
         <div className="relative flex items-center md:-ml-8">
