@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Signup() {
+function St_home() {
   return <h1>This is the St_home</h1>;
 }
 

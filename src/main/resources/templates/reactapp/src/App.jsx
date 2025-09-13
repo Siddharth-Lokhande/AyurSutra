@@ -7,13 +7,13 @@ import Navbar from './components/navbar'
 import Footer from './components/footer'
 import Start from './page/starter/start'
 import Signup from './page/signup'
+import Login from './page/Login'
+import CameraAudio from './page/camera'
 function App() {
 
-  return (
-    <>
-    <Signup/>
+  return (  
+    <Start/>
     
-    </>
   )
 }
 

@@ -20,7 +20,7 @@ function Signup() {
     };
 
     try {
-      const response = await fetch("http://192.168.1.9:8080/signup", {
+      const response = await fetch("http://172.16.18.52:8080/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
