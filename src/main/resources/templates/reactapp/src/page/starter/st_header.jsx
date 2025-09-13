@@ -1,6 +1,6 @@
 import React from 'react';
 
-function St_header() {
+function St_header({ onNavClick }) {
   return (
     <header className="text-white body-font bg-black">
       <div className="w-full mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -20,12 +20,15 @@ function St_header() {
           <span className="ml-3 text-xl">AyurSutra</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-900">Home</a>
-          <a className="mr-5 hover:text-gray-900">Therapy</a>
-          <a className="mr-5 hover:text-gray-900">About Us</a>
-          <a className="mr-5 hover:text-gray-900">Contact Us</a>
+          <a className="mr-5 hover:text-gray-900" onClick={() => onNavClick('home')}>Home</a>
+          <a className="mr-5 hover:text-gray-900" onClick={() => onNavClick('therapy')}>Therapy</a>
+          <a className="mr-5 hover:text-gray-900" onClick={() => onNavClick('about')}>About Us</a>
+          <a className="mr-5 hover:text-gray-900" onClick={() => onNavClick('contact')}>Contact Us</a>
         </nav>
-        <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+        <button
+          className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+          onClick={() => onNavClick('signup')}
+        >
           Signup
           <svg
             fill="none"
