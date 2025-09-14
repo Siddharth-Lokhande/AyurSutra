@@ -11,12 +11,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.ayursutra.panchakarma.Model.Authen;
+import com.ayursutra.panchakarma.Model.Mongose;
 import com.ayursutra.panchakarma.Service.AuthenService;
 @RestController
 @CrossOrigin
 public class AuthenController {
 	@Autowired
 	AuthenService service;
+	Mongose mong;
 @PostMapping("/updateuser")
 public void updatepassword(@RequestBody Authen authen) {
 	 service.updatepassword(authen);
