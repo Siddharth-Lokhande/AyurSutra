@@ -2,13 +2,18 @@ package com.ayursutra.panchakarma.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ayursutra.panchakarma.Model.Authen;
+import com.ayursutra.panchakarma.Model.AuthenMongo;
+import com.ayursutra.panchakarma.Repository.AuthenMongoRepo;
 import com.ayursutra.panchakarma.Repository.AuthenRepo;
 @Service
 public class AuthenService {
 	@Autowired
-	AuthenRepo authenRepo;		
+	AuthenRepo authenRepo;
+	AuthenMongoRepo authenMongoRepo;
 		public String registerUser(Authen authen) {
-			authen.setUserid(generateid());
+			authen.setUserid(generateid()); int id=authen.getUserid();
+			AuthenMongo authenMongo=new AuthenMongo(id);
+			authenMongoRepo.save(authenMongo);
 			if (authen.getEmail() != null && authenRepo.findByEmail(authen.getEmail()).isPresent()) {
 				return "{ \"email\": false }";
 			}
